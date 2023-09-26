@@ -41,7 +41,7 @@
 		</plugins>
 	</build>
 	<scm>
-		<developerConnection>scm:git:git@github.com:brunohgrau/sfg-pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:gh repo clone brunohgrau/sfg-pet-clinic</developerConnection>
 	</scm>
 
 </project>
