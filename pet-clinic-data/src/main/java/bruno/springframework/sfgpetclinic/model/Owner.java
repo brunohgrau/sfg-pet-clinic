@@ -11,6 +11,16 @@ public class Owner extends Person{
     private String telephone;
     private Set<Pet> pets = new HashSet<>();
 
+    public Owner() {
+    }
+
+    public Owner(String firstName, String lastName, String address, String city, String telephone) {
+        super(firstName,lastName);
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+    }
+
     public String getAddress() {
         return address;
     }
