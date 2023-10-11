@@ -1,4 +1,4 @@
-package bruno.springframework.sfgpetclinic.services.map.springdatajpa;
+package bruno.springframework.sfgpetclinic.services.springdatajpa;
 import bruno.springframework.sfgpetclinic.model.Vet;
 import bruno.springframework.sfgpetclinic.repositories.VetRepository;
 import bruno.springframework.sfgpetclinic.services.VetService;

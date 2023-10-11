@@ -1,9 +1,11 @@
 package bruno.springframework.sfgpetclinic.services.map;
 import bruno.springframework.sfgpetclinic.model.Visit;
 import bruno.springframework.sfgpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit,Long> implements VisitService {
 
 
@@ -22,7 +24,7 @@ public class VisitMapService extends AbstractMapService<Visit,Long> implements V
     public Visit save(Visit visit) {
        if(visit.getPet() == null || visit.getPet().getOwner() == null || visit.getPet().getId() == null
        || visit.getPet().getOwner().getId() == null ){
-            throw new RuntimeException("Invalida Visit");
+            throw new RuntimeException("Invalid Visit");
        }
 
        return super.save(visit);
