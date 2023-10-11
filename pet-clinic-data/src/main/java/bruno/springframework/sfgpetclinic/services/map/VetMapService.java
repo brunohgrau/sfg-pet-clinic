@@ -1,8 +1,6 @@
 package bruno.springframework.sfgpetclinic.services.map;
-import bruno.springframework.sfgpetclinic.model.Owner;
 import bruno.springframework.sfgpetclinic.model.Speciality;
 import bruno.springframework.sfgpetclinic.model.Vet;
-import bruno.springframework.sfgpetclinic.services.CrudService;
 import bruno.springframework.sfgpetclinic.services.SpecialtyService;
 import bruno.springframework.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
@@ -10,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
 
     private final SpecialtyService specialtyService;
 
-    public VetServiceMap(SpecialtyService specialtyService) {
+    public VetMapService(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
     }
 
