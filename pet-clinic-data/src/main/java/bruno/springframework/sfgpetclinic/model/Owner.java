@@ -1,9 +1,13 @@
 package bruno.springframework.sfgpetclinic.model;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Setter
+@Getter
+@NoArgsConstructor
 @Entity
 @Table(name="owners")
 public class Owner extends Person{
@@ -17,8 +21,6 @@ public class Owner extends Person{
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
-    public Owner() {
-    }
 
     public Owner(String firstName, String lastName, String address, String city, String telephone) {
         super(firstName,lastName);
