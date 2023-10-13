@@ -5,9 +5,11 @@ import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="owners")
 public class Owner extends Person{
@@ -22,11 +24,17 @@ public class Owner extends Person{
     private Set<Pet> pets = new HashSet<>();
 
 
-    public Owner(String firstName, String lastName, String address, String city, String telephone) {
-        super(firstName,lastName);
+    @Builder
+    public Owner(Long id, String firstName, String lastName, String address, String city,
+                 String telephone, Set<Pet> pets) {
+        super(id, firstName, lastName);
         this.address = address;
         this.city = city;
         this.telephone = telephone;
+
+        if(pets != null) {
+            this.pets = pets;
+        }
     }
 
     public String getAddress() {
